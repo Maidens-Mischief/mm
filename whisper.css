@@ -118,3 +118,10 @@ left: 0;
   height: 30px;
   
 }
+
+button.sent {
+	background color: #5a3d2b;
+	color: #f3e9dc;
+	cursor: not-allowed;
+	transition: background-color 0.3s ease;
+}
