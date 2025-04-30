@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gossip Girl</title>
+    <link rel="stylesheet" href="index.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<style>
+	   body{
+		transition: opacity 0.5s ease-in-out;
+		opacity: 1;
+	}
+	.fade-out{
+		opacity: 0;
+	}
+</style>
+</head>
+<body>
+    <header>
+	<div class="hero">
+		<div class="navbar"> 
+  <div class="slay">
+	 <h1>Maidens and Mischief</h1>
+        <nav>
+            <ul>
+                <li><a href="#" id="home" class="active">Home</a></li>
+<script>
+	document.getElementById('home').addEventListener('click',function() {
+	document.body.classList.add('fade-out');
+	setTimeout(function(){
+	  window.location.href = 'index.html';
+}, 400);
+});
+	</script>
+                <li><a href="#">Court</a></li>
+                <li><a href="#">Tales</a></li>
+                <li><a href="#" id="whisper">Whispers</a></li>
+<script>
+	document.getElementById('whisper').addEventListener('click',function() {
+	document.body.classList.add('fade-out');
+	setTimeout(function(){
+	  window.location.href = 'whisper.html';
+}, 400);
+});
+	</script>
+            </ul>
+	</div>
+
+		    <img src="logo.png" class="logo"
+			height="150"
+			width="200">
+</div>	 	
+  </div>
+	</div>
+        </nav>
+     
+ 
+    </header>
+
+<body>
+</body>
+
+ <footer>
+    <p>&copy; 2025 Maidens and Mischief. All rights reserved.</p>
+  </footer>
+</html>

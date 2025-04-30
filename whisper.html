@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maidens and Mischief - Whispers</title>
+  <link rel="stylesheet" href="whisper.css" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<style>
+	   body{
+		transition: opacity 0.5s ease-in-out;
+		opacity: 1;
+	}
+	.fade-out{
+		opacity: 0;
+	}
+</style>
+</head>
+<body>
+  <header>
+    <h1>Maidens and Mischief</h1>
+    <nav>
+      <ul>
+        <li><a href="#" id="home3">Home</a></li>
+<script>
+	document.getElementById('home3').addEventListener('click',function() {
+	document.body.classList.add('fade-out');
+	setTimeout(function(){
+	  window.location.href = 'index.html';
+}, 400);
+});
+	</script>
+        <li><a href="#">Court</a></li>
+        <li><a href="#">Tales</a></li>
+        <li><a href="#" id="whisper3" class="active">Whispers</a></li>
+<script>
+	document.getElementById('whisper3').addEventListener('click',function() {
+	document.body.classList.add('fade-out');
+	setTimeout(function(){
+	  window.location.href = 'whisper.html';
+}, 400);
+});
+	</script>
+
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+ 
+
+    <section class="info-section">
+      <h2>Share Your Secrets</h2>
+	<p> In the halls of Camelot, nothing stays hidden for long — secret meetings, stolen glances, and strange happenings. </p>
+	<p> This is your scroll. Your voice. Your whisper in the wind.
+	<p><b> Write what you've seen. Say what you've heard. Let the whispers begin<i>!</i></b></p>
+	<h2>No one will know it was you.</h2>
+
+<p><span> Xoxo,</span><br>
+<span>Your Secret Messenger</span><p>
+    </section>
+
+    <section class="form-section">
+      <form action="#" method="post">
+        <textarea name="gossip" rows="6" placeholder="Whisper your gossip here..."></textarea>
+
+        <button type="submit">Send Whisper</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Maidens and Mischief. All rights reserved.</p>
+  </footer>
+</body>
+</html>
+
