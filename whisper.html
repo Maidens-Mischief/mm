@@ -63,13 +63,26 @@
     </section>
 
     <section class="form-section">
-      <form action="#" method="post">
-        <textarea name="gossip" rows="6" placeholder="Whisper your gossip here..."></textarea>
-
-        <button type="submit">Send Whisper</button>
+   <form id="gossipForm">
+	<textarea id="gossipInput" name="gossip" rows="6" placeholder="Whisper your gossip here..."></textarea> 
+	<button id="gossipButton" type="submit">Send Whisper</button>     
       </form>
     </section>
   </main>
+
+<script>
+  const form = document.getElementById("gossipForm");
+  const input = document.getElementById("gossipInput");
+  const button = document.getElementById("gossipButton");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Stop the page from reloading
+    input.value = ""; // Clear the textarea
+    button.textContent = "Whisper Sent"; // Change button text
+    button.disabled = true; // Optional: prevent multiple submits
+	button.classList.add("sent");
+  });
+</script>
 
   <footer>
     <p>&copy; 2025 Maidens and Mischief. All rights reserved.</p>
