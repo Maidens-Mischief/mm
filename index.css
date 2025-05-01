@@ -44,7 +44,7 @@ nav ul li a {
     text-decoration: none;
 }
 
-}
+
 
 nav a.active,
 nav a:hover {
@@ -56,121 +56,6 @@ main {
 }
 
 
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-}
-
-.profile-container {
-  max-width: 650px;
-  margin: 0 auto;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  height: 600px;
-  background: white;
-  box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.banner img {
-  width: 100%;
-  height: 130px;
-  object-fit: cover;
-  margin-top: 20px;
-}
-
-.profile-pic {
-  display: flex;
-  justify-content: center;
-  margin-top: -40px;
-}
-
-.profile-pic img {
-  width: 80px;
-  height: 80px;
-  border: 3px solid white;
-  border-radius: 12px;
-  background: white;
-}
-
-.profile-info {
-  text-align: center;
-  padding: 0 10px;
-}
-
-.profile-info h1 {
-  margin: 10px 0 5px;
-  font-size: 22px;
-}
-
-.handle {
-  color: #1da1f2;
-  font-size: 14px;
-}
-
-.link {
-  color: #555;
-  font-size: 13px;
-  margin-bottom: 15px;
-}
-
-.bio {
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-.buttons {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.secret-btn,
-.follow-btn,
-.dots-btn {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 20px;
-  font-size: 14px;
-  cursor: pointer;
-}
-
-.secret-btn {
-  background: #1da1f2;
-  color: white;
-}
-
-.follow-btn {
-  background: #1da1f2;
-  color: white;
-}
-
-.dots-btn {
-  background: #e6ecf0;
-}
-
-.tabs {
-  display: flex;
-  justify-content: flex-start;
-  padding: 10px 20px;
-  border-top: 1px solid #ddd;
-  border-bottom: 2px solid #1da1f2;
-  gap: 10px;
-}
-
-.tab {
-  font-weight: bold;
-  color: #1da1f2;
-}
-
-.tab-icon {
-  margin-left: auto;
-}
 body {
   margin: 0;
   font-family: 'MedievalSharp', cursive;
