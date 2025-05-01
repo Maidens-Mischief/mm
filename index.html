@@ -22,7 +22,7 @@
     <header>
 	<div class="hero">
 		<div class="navbar"> 
-
+  
 	 <h1>Maidens and Mischief</h1>
         <nav>
             <ul>
@@ -48,6 +48,7 @@
 	</script>
             </ul>
 	
+
 
 </div>	 	
   </div>
@@ -77,8 +78,8 @@
       </p>
 
       <div class="buttons">
-        <button class="secret-btn">Got a secret?</button>
-        <button class="follow-btn">Follow</button>
+        <button class="secret-btn" onclick="location.href='whisper.html'">Got a secret?</button>
+        <button id="followBtn" class="follow-btn">Follow</button>
         <button class="dots-btn"><b>⋯</b></button>
       </div>
 
@@ -89,6 +90,104 @@
     </div>
   </div>
 
+<div class="wrapper">
+    <div class="container">
+
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <h2>Welcome</h2>
+        <p>Welcome to Mischief and Maidens, the Scroll of the Kingdom— Made by nobles, for nobles.</p>
+
+        <h2>Tales</h2>
+        <p>Scandals, secrets, and stories from inside the castle walls. The truth? That depends on who's telling it.</p>
+
+        <h2>Portraits & Tapestries</h2>
+        <p>Gaze upon the attire of fair maidens and gallant knights. <br><a href="#">VIEW PORTRAITS</a></p>
+
+        <h2>Gatherings</h2>
+        <p>Feasts, Duels, and Royal Celebrations — the places to see and be seen (and overheard).</p>
+
+        <h2>Royal Archives</h2>
+        <p>Old scrolls, official records, and sacred sources — for the curious, the clever, and the cautious</p>
+      </div>
+
+      <!-- Main Feed -->
+      <div class="main">
+
+        <h1 class="title">Mischief Maiden<i>!</i></h1>
+
+        <!-- Post 1 -->
+        <div class="post-box">
+          <p class="headline">Spotted: "Forbidden Love in the Rose Garden: Queen Guinevere's Secret Knight"</p>
+          <img src="tg.jpg" alt="pic1" class="post-image">
+          <p class="post-text">
+            Whispers from the inner chambers say Queen Guinevere has been meeting Sir Lancelot beneath the rose-covered royal garedens after midnight. <br> Last night, the queen's scarf was spotted snagged on the knight's belt — by a chamberaid who's now been dismissed without cause. <br> <br>
+<i> is this courtly love... or a royal scandal?</i>
+            <span class="signature">xoxo, MISCHIEF MAIDEN</span>
+          </p>
+        </div>
+
+        <!-- Post 2 -->
+        <div class="post-box">
+          <p class="headline">Spotted: "Blood and Magic - The Truth Behind Mordred's Birth"</p>
+          <img src="mord.jpg" alt="pic2" class="post-image">
+          <p class="post-text">
+            So here's the rumor: King Arthur once fell in love with a mysterious lady during a spring festival. The twist? She was actually his half-sister, Morgan Le Fay.<br> Their child? Mordred — the same guy who's now causing major drama in the kingdom. <br> <br>
+<i> Let's just say... family dinners are probably awkward now. </i>
+            <span class="signature">xoxo, MISCHIEF MAIDEN</span>
+          </p>
+        </div>
+
+        <!-- Post 3 -->
+        <div class="post-box">
+          <p class="headline">Spotted: "Excalibur is Missing — Yes, That Sword"</p>
+          <img src="sword.jpg" alt="pic3" class="post-image">
+          <p class="post-text">
+            King Arthur's magical sword, Excalibur, is gone! Some same it disappeared after a battle. Others think that the Lady of the Lake took it back.<br> A few even say Mordred has it...<br> Whoever has it now might have the power to rule Camelot! <br><br>
+<i> No sword, No king? We'll find out. </i>
+            <span class="signature">xoxo, MISCHIEF MAIDEN</span>
+          </p>
+        </div>
+
+
+        <!-- Post 4 -->
+        <div class="post-box">
+          <p class="headline">Spotted: "The Lady of the Lake Has a New Favorite — and It's Not Lancelot"</p>
+          <img src="lotl.jpg" alt="pic4" class="post-image">
+          <p class="post-text">
+            Sir Galahad (yes, Lancelot's son!) just got a glowing cup from the Lady of the Lake herself. People say it's the Holy Grail. Galahad looked like a hero, and Lancelot... not so much. <br> Looks like there's a new star knight at Camelot. <br><br>
+<i>Turns out, being kind and nice really does pay off.</i>
+            <span class="signature">xoxo, MISCHIEF MAIDEN</span>
+          </p>
+        </div>
+
+      </div>
+
+      <!-- Side Buttons -->
+      <div class="nav-buttons">
+        <div class="nav-circle">hall</div>
+        <div class="nav-circle">tales</div>
+        <div class="nav-circle">portraits</div>
+        <div class="nav-circle">scrolls</div>
+      </div>
+
+    </div>
+  </div>
+
+
+<script>
+  const followBtn = document.getElementById('followBtn');
+
+  followBtn.addEventListener('click', function () {
+    if (followBtn.textContent === 'Follow') {
+      followBtn.textContent = 'Following';
+      followBtn.classList.add('followed'); // optional: for styling
+    } else {
+      followBtn.textContent = 'Follow';
+      followBtn.classList.remove('followed');
+    }
+  });
+</script>
 
 </body>
 
