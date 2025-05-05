@@ -19,34 +19,50 @@
 </style>
 </head>
 <body>
-  <header>
-    <h1>Maidens and Mischief</h1>
-    <nav>
-      <ul>
-        <li><a href="#" id="home3">Home</a></li>
-<script>
-	document.getElementById('home3').addEventListener('click',function() {
-	document.body.classList.add('fade-out');
-	setTimeout(function(){
-	  window.location.href = 'index.html';
-}, 400);
-});
-	</script>
-        <li><a href="#">Court</a></li>
-        <li><a href="#">Tales</a></li>
-        <li><a href="#" id="whisper3" class="active">Whispers</a></li>
-<script>
-	document.getElementById('whisper3').addEventListener('click',function() {
-	document.body.classList.add('fade-out');
-	setTimeout(function(){
-	  window.location.href = 'whisper.html';
-}, 400);
-});
-	</script>
-
-      </ul>
-    </nav>
+ <header>
+    <div class="hero">
+      <div class="navbar"> 
+  <h1>Maidens and Mischief</h1>
+  
+        <nav>
+          <ul>
+            <li><a href="#" id="home">Home</a></li>
+            <li><a href="#" id="court">Court</a></li>
+            <li><a href="#" id="tales">Tales</a></li>
+            <li><a href="#" id="whisper" class="active">Whispers</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
+
+  <script>
+    document.getElementById('home').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'index.html';
+      }, 400);
+    });
+ document.getElementById('court').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'court.html';
+      }, 400);
+    });
+document.getElementById('tales').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'tales.html';
+      }, 400);
+    });
+    document.getElementById('whisper').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'whisper.html';
+      }, 400);
+    });
+  </script>
+</header>
 
   <main>
  
@@ -84,9 +100,11 @@
   });
 </script>
 
-  <footer>
-    <p>&copy; 2025 Maidens and Mischief. All rights reserved.</p>
-  </footer>
+ <footer>
+  📜 &copy; 528 A.D. <strong>Mischief and Maidens</strong> — All scrolls reserved. Unauthorized copying may result in a royal summons.
+  <img src="waxseal.png" alt="Wax Seal" style="height: 30px; vertical-align: middle; margin-left: 8px;">
+</footer>
+
 </body>
 </html>
 
