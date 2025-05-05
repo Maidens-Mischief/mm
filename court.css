@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background: url('images/parchment.jpg') repeat;
+  color: #3b2d1f;
+  background-size: cover;
+}
+
+
+/* Header */
+header {
+  background-color: #846c55;
+  color: #fff;
+  padding: 0.5px;
+  text-align: center;
+  font-size: 17px;
+  width: 100%;
+  font-family: 'Uncial Antiqua', cursive;
+}
+
+/* Hero Section */
+.hero {
+  width: 80%;
+  margin: auto;
+}
+
+h1 {
+	
+	font-family: 'Uncial Antiqua', cursive;       
+}
+
+.navbar p{
+	margin-top: -10px;
+	
+}
+
+/* Navbar */
+.navbar {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px;
+  font-family: 'MedievalSharp', cursive;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  
+}
+
+nav ul li {
+	display: inline;
+	margin: 0 30px;
+}
+
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a.active,
+nav a:hover {
+  color: #fcd5ce;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.character-card {
+  background: rgba(255, 253, 245, 0.95);
+  border: 12px double #5e422e;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Pseudo scroll curls */
+.character-card::before,
+.character-card::after {
+  content: '';
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: radial-gradient(circle, rgba(0,0,0,0.1) 10%, transparent 70%);
+  z-index: 2;
+}
+
+.character-card::before {
+  top: 0;
+  left: 0;
+  border-top-left-radius: 15px;
+}
+
+.character-card::after {
+  bottom: 0;
+  right: 0;
+  border-bottom-right-radius: 15px;
+}
+
+/* Candlelight glow */
+.character-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 25px rgba(255, 200, 120, 0.3), 0 0 10px rgba(255, 150, 80, 0.2);
+}
+
+/* Flickering animation */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+    text-shadow: 0 0 4px #ffdfa1, 0 0 6px #ffbd69;
+  }
+  20%, 24%, 55% {
+    opacity: 0.95;
+    text-shadow: 0 0 2px #ffcd91, 0 0 4px #ffb347;
+  }
+}
+
+.character-card:hover .card-info h2 {
+  animation: flicker 2s infinite;
+}
+
+.character-card img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.card-info {
+  padding: 1rem 1.2rem;
+}
+
+.card-info h2 {
+  font-size: 1.6rem;
+  color: #5a3c1e;
+  font-family: 'Uncial Antiqua', cursive;
+  margin-bottom: 0.5rem;
+  transition: all 0.3s ease;
+}
+
+.card-info p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4a3b2b;
+}
+
+/* Optional magic glow for select characters */
+.character-card.magic h2 {
+  color: #3c2060;
+  text-shadow: 0 0 5px #bfaeff, 0 0 10px #907ad6;
+}
+
+footer {
+      background: #3a2c1b;
+      color: #e8d9b8;
+      text-align: center;
+      padding: 1rem;
+      font-size: 17px;
+      border-top: 4px solid #d4b17a;
+      height: 35px;
+    }
