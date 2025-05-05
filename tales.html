@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Whispers of Camelot</title>
+  <link href="https://fonts.googleapis.com/css2?family=Uncial+Antiqua&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background: #f9f5e3;
+       font-family: 'MedievalSharp', cursive;
+      color: #000;
+      line-height: 1.7;
+      scroll-behavior: smooth;
+    }
+
+/* Header */
+header {
+  background-color: #846c55;
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  font-size: 17px;
+  width: 100%;
+  margin-top: -80px;
+  font-family: 'Uncial Antiqua', cursive;
+}
+
+/* Hero Section */
+.hero {
+  width: 80%;
+  margin: auto;
+}
+
+.navbar h1 {
+	margin-top: 80px;
+	font-family: 'Uncial Antiqua', cursive;
+}
+
+/* Navbar */
+.navbar {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px;
+  font-family: 'MedievalSharp', cursive
+}
+
+.navbar p{ 
+	margin-top: -20px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  
+}
+
+nav ul li {
+	display: inline;
+	margin: 0 30px;
+}
+
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav a.active,
+nav a:hover {
+  color: #fcd5ce;
+}
+
+header .subtitle {      
+      color: #fff;
+    }
+
+
+    nav a {
+      color: #fff;
+      margin: 0 0.8rem;
+      text-decoration: none;
+      font-weight: bold;
+      
+    }
+
+
+    .tales-container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 1rem;
+    }
+
+    .tale {
+      background: #fffdf6;
+      border: 2px solid #d4b17a;
+      border-radius: 12px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease;
+    }
+
+    .tale.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .tale:hover {
+      box-shadow: 0 0 20px rgba(213, 190, 123, 0.6);
+    }
+
+    .tale h2 {
+      font-family: 'UnifrakturCook', cursive;
+      font-size: 2rem;
+      margin-top: 0;
+      color: #3a2c1b;
+    }
+
+    .date {
+      font-size: 0.9rem;
+      color: #8d6e45;
+      margin-bottom: 1rem;
+    }
+
+    .signature {
+      display: block;
+      text-align: right;
+      font-style: italic;
+      margin-top: 1.5rem;
+      color: #7c5a2e;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background: #3a2c1b;
+      color: #fcefc2;
+      border: none;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      width: 40px;
+      height: 40px;
+      cursor: pointer;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+      transition: background 0.3s ease;
+    }
+
+    #backToTop:hover {
+      background: #5a442e;
+    }
+
+.parchment-note {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(60%);
+  z-index: 1000;
+  text-align: center;
+}
+
+#note-toggle {
+  background-color: #dac7a0;
+  border: 2px solid #a89a7d;
+  font-family: 'Cinzel', serif;
+  font-size: 1rem;
+  padding: 8px 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+#note-popup {
+  background: url('parchment.jpg') repeat;
+  background-color: #f8f0df;
+  color: #3b2f1e;
+  font-family: 'Cormorant Garamond', serif;
+  border: 1px solid #a89a7d;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  width: 55%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.3);
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.5s ease-in-out linear 0.5s;
+}
+
+#note-popup p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+#note-popup.visible {
+	visibility: visible;
+	opacity: 1;
+	transition: visibility 0s, opacity 0.5s ease-in-out linear;
+}
+
+
+
+.close-btn {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  color: #3b2f1e;
+  font-weight: bold;
+  background: transparent;
+  border: none;
+  visibility: visible;
+  z-index: 10;
+}
+
+.close-btn:hover {
+  color: #a89a7d; /* Hover effect */
+}
+
+footer {
+      background: #3a2c1b;
+      color: #e8d9b8;
+      text-align: center;
+      padding: 1rem;
+      font-size: 17px;
+      border-top: 4px solid #d4b17a;
+      height: 35px;
+    }
+
+  </style>
+</head>
+<body>
+
+  <style>
+    body {
+      transition: opacity 0.5s ease-in-out;
+      opacity: 1;
+    }
+    .fade-out {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="hero">
+      <div class="navbar"> 
+  <h1>The Tales of Camelot</h1>
+  <p class="subtitle">Courtly secrets, veiled in ink.</p>
+        <nav>
+          <ul>
+            <li><a href="#" id="home">Home</a></li>
+            <li><a href="#" id="court">Court</a></li>
+            <li><a href="#" id="tales" class="active">Tales</a></li>
+            <li><a href="#" id="whisper">Whispers</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <script>
+    document.getElementById('home').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'index.html';
+      }, 400);
+    });
+ document.getElementById('court').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'court.html';
+      }, 400);
+    });
+document.getElementById('tales').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'tales.html';
+      }, 400);
+    });
+    document.getElementById('whisper').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'whisper.html';
+      }, 400);
+    });
+  </script>
+</header>
+
+<div class="parchment-note">
+  <button id="note-toggle">✎ Note on the Dates</button>
+  <div id="note-popup">
+    <span id="close-popup" class="close-btn">✖</span>
+
+    <p><strong>Note on the Dates</strong><br>
+    Before anyone pulls out a history scroll: yes, the dates in these tales aren’t exact. The true timeline of Camelot is more rumor than record. Most scholars place Arthur’s reign in the years after Rome’s fall — somewhere in the late 5th or early 6th century. But when secrets are this juicy, does it really matter <em>when</em> they happened? These entries keep to the spirit of the age, if not the letter. Consider the dates more for flavor than fact.<br><br>
+    XOXO, <br>Mischief Maiden</p>
+  </div>
+</div>
+
+<main class="tales-container" id="top">
+
+  <!-- TALE 1: Arthur -->
+  <article class="tale">
+    <h2>The King’s Mirror</h2>
+    <p class="date">April 2, 1387</p>
+    <p>When Arthur was young, before Camelot rose proud on the hill, he would slip away from his lessons to speak with the woman in the mirror. The mirror was hidden in the heart of the forest, a relic of old magic. In it, Arthur saw not his reflection, but his possibilities. One day, it showed him a crown of ash. Another day, a sword shattered in two. And once, just once, he saw himself alone in a field of bones.</p>
+    <p>He kept the mirror secret, even from Merlin. As king, he returned only once. The mirror showed him a perfect court: harmony, honor, love. But when he looked again, the glass had cracked down the center. Each shard reflected a different truth. He never returned after that day. But some say he still dreams of it, and in dreams, he bleeds golden tears.</p>
+    <span class="signature">—xoxo, <br> Mischief Maiden</span>
+  </article>
+
+  <!-- TALE 2: Guinevere -->
+  <article class="tale">
+    <h2>The Garden Behind the Veil</h2>
+    <p class="date">March 15, 1387</p>
+    <p>Guinevere keeps a garden behind the veil of her chambers, where no knight dares enter. The roses bloom even in frost, and the fountain whispers secrets in languages only she understands. They say she once plucked a thorn from a cursed bush and hid it in her braid for protection. That year, no blade pierced her in battle, and every suitor faltered mid-proposal.</p>
+    <p>Once, Morgause visited the garden, uninvited. The roses turned to stone. The water stilled. Guinevere spoke three words in an old tongue, and Morgause left barefoot, her slippers aflame. Since then, Guinevere tends her garden only by moonlight, whispering to it of the war between fate and will.</p>
+    <span class="signature">—xoxo, <br> Mischief Maiden</span>
+  </article>
+
+  <!-- TALE 3: Lancelot -->
+  <article class="tale">
+    <h2>The Wound Beneath the Armor</h2>
+    <p class="date">April 7, 1387</p>
+    <p>Lancelot once confessed to a silent priest that his truest wound was not from sword nor spear, but from song. It came during a feast, when a minstrel sang of a knight who could never be touched, but longed to feel. Every goblet stilled. Lancelot stood and walked into the rain, leaving his mantle behind.</p>
+    <p>He spent that night in the chapel, not praying, but listening. The wind whispered names into the cracks of the stone. By dawn, he had carved a small falcon into the altar and vanished for seven days. When he returned, his armor gleamed, but his eyes were grey. No one ever spoke of the song again.</p>
+    <span class="signature">—xoxo, <br> Mischief Maiden</span>
+  </article>
+
+
+
+ <!-- TALE 4: Galahad -->
+  <article class="tale">
+    <h2>The Trial of Purity</h2>
+    <p class="date">March 30, 1387</p>
+    <p>Galahad was born of light and silence. When he was twelve, he was taken to a cavern beneath Camelot where the stones wept and the air hummed with trials unseen. A voice—not human—told him to walk blindfolded for one hundred steps. With each step, a sin not his own tried to cling to him. Envy whispered. Greed pulled at his feet. Lust traced his palm. But Galahad kept walking.</p>
+    <p>At the hundredth step, he fell. When he opened his eyes, a white flower had bloomed from the ground where his tears struck stone. He keeps that flower pressed in the Book of Hours he never opens—because he fears what it may have become.</p>
+    <span class="signature">—xoxo, <br> Mischief Maiden</span>
+  </article>
+
+  <!-- TALE 5: Lady of the Lake -->
+  <article class="tale">
+    <h2>The Pact of Stillwater</h2>
+    <p class="date">April 20, 1387</p>
+    <p>Before she was the Lady of the Lake, she was simply Nimue, a girl who sang lullabies to stars. One night, the stars answered. They fell as silver rain into the lake’s heart, and when she swam down to them, they asked her to stay. In return, they gave her the pact: a voice that could calm tempests and a hand that could draw forth destiny.</p>
+    <p>But the pact came with silence. Nimue may never speak her own name again. If she does, the lake will drain and the stars will return to the sky, leaving her mortal once more. Sometimes, late at dusk, she mouths her name at her reflection. The water never stirs—but the stars blink anxiously.</p>
+    <span class="signature">—xoxo, <br> Mischief Maiden</span>
+  </article>
+
+  <!-- TALE 6: Morgause -->
+  <article class="tale">
+    <h2>The Mirror Bride</h2>
+    <p class="date">May 2, 1387</p>
+    <p>Morgause once wed a prince carved from glass. She summoned him from her mirror, shaped from shards of her own vanity and breath. He danced like moonlight, spoke in riddles, and told her truths no one dared. For a year they lived in secret, their chamber lined in silver so he would not vanish.</p>
+    <p>But one night, he showed her his palm, and there was a crack. “You dream too loudly,” he said, and kissed her goodbye. She shattered every mirror in her tower—save one. In it, she watches herself sleep, and some nights, there are two silhouettes in the bed.</p>
+    <span class="signature">—xoxo, <br> Mischief Maiden</span>
+  </article>
+
+  <!-- TALE 7: Mordred -->
+  <article class="tale">
+    <h2>The Lion in the Labyrinth</h2>
+    <p class="date">May 4, 1387</p>
+    <p>Mordred was born in a storm and raised in a maze. The Lady Morgause sent him into the stone labyrinth on his seventh name day. “Find the lion,” she said. “It knows who you are.” For three days he wandered, marking walls with blood from his scraped knuckles. On the fourth, he found it—a lion made of shadow and voice.</p>
+    <p>It asked, “Are you the son or the sword?” He answered, “Both.” The lion bowed, and its mane became a cloak. Since then, he wears it when truth is needed and removes it when kindness is required. But it grows heavier with each betrayal. Someday, he may no longer lift it.</p>
+    <span class="signature">—xoxo, <br> Mischief Maiden</span>
+  </article>
+
+</main>
+
+<button id="backToTop" title="Back to top">↑</button>
+
+<script>
+
+
+  const button = document.getElementById('note-toggle');
+
+  button.addEventListener('click', () => {
+    if (button.textContent === '✎ Note on the Dates') {
+      button.textContent = '❌';
+    } else {
+      button.textContent = '✎ Note on the Dates';
+    }
+  });
+
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add('visible');
+    });
+  });
+
+  document.querySelectorAll('.tale').forEach(tale => {
+    observer.observe(tale);
+  });
+
+  const backToTop = document.getElementById("backToTop");
+  window.onscroll = function () {
+    backToTop.style.display = window.scrollY > 300 ? "block" : "none";
+  };
+  backToTop.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+
+  const toggle = document.getElementById('note-toggle');
+const popup = document.getElementById('note-popup');
+const closeBtn = document.getElementById('close-popup');
+
+toggle.addEventListener('click', () => {
+  popup.classList.toggle('visible');
+});
+
+closeBtn.addEventListener('click', () => {
+  popup.classList.remove('visible');  // Remove the 'visible' class to hide the popup
+});
+
+
+
+</script>
+
+
+<footer>
+  📜 &copy; 528 A.D. <strong>Mischief and Maidens</strong> — All scrolls reserved. Unauthorized copying may result in a royal summons.
+  <img src="waxseal.png" alt="Wax Seal" style="height: 30px; vertical-align: middle; margin-left: 8px;">
+</footer>
+
+</body>
+</html>
