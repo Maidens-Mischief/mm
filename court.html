@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Maidens & Mischief | Character Cards</title>
+  <link rel="stylesheet" href="court.css">
+<style>
+    body {
+      transition: opacity 0.5s ease-in-out;
+      opacity: 1;
+    }
+    .fade-out {
+      opacity: 0;
+    }
+  </style>
+</head>
+<body>
+
+ 
+ 
+  <!-- Site Header -->
+<header>
+  <div class="hero">
+    <div class="navbar"> 
+      <h1>The Court Of Camelot</h1>
+<p>Meet the power players behind the parchment—secrets, scandals, and swords await.</p>
+
+      <nav>
+        <ul>
+          <li><a href="#" id="home">Home</a></li>
+          <li><a href="#" id="Court" class="active">Court</a></li>
+          <li><a href="#" id="tales">Tales</a></li>
+          <li><a href="#" id="whisper">Whispers</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+ <script>
+    document.getElementById('home').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'index.html';
+      }, 400);
+    });
+ document.getElementById('Court').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'court.html';
+      }, 400);
+    });
+document.getElementById('tales').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'tales.html';
+      }, 400);
+    });
+    document.getElementById('whisper').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'whisper.html';
+      }, 400);
+    });
+  </script>
+</header>
+
+
+
+
+  <main class="card-grid">
+
+    <div class="character-card">
+      <img src="ch1.png" alt="King Arthur">
+      <div class="card-info">
+        <h2>King Arthur</h2>
+        <p>The legendary ruler of Camelot, torn between upholding justice and keeping the kingdom’s skeletons in their closets. Noble, but not naïve—Arthur’s greatest threat may lie within his own Round Table.</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <img src="ch2.png" alt="Queen Guinevere">
+      <div class="card-info">
+        <h2>Queen Guinevere</h2>
+        <p>A queen with grace and grit. Married to a king, drawn to a knight—Guinevere balances love, duty, and an ever-growing whisper network of palace intrigue.</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <img src="ch3.png" alt="Morgause">
+      <div class="card-info">
+        <h2>Morgause</h2>
+        <p>Half-sister to Arthur, high priestess of drama. With magic in her blood and secrets in her smile, Morgause stirs trouble like it's tea. Don’t blink—she’s already a step ahead.</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <img src="ch4.png" alt="Mordred">
+      <div class="card-info">
+        <h2>Mordred</h2>
+        <p>Arthur’s son—or his undoing? Torn between loyalty and vengeance, Mordred walks a razor’s edge. Is he the rightful heir or a rebel in disguise?</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <img src="ch5.png" alt="Sir Lancelot">
+      <div class="card-info">
+        <h2>Sir Lancelot</h2>
+        <p>The knight with a perfect blade and imperfect desires. Lancelot is Arthur’s most trusted warrior—but his forbidden love for Guinevere might shatter the Round Table.</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <img src="ch6.png" alt="Lady of the Lake">
+      <div class="card-info">
+        <h2>Lady of the Lake</h2>
+        <p>An immortal enigma draped in mist. She gave Arthur Excalibur—but everything comes at a price. Whose side is she truly on? Only the lake knows.</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <img src="ch7.png" alt="Sir Galahad">
+      <div class="card-info">
+        <h2>Sir Galahad</h2>
+        <p>The purest knight with a sacred quest—and a dangerous curiosity. As the son of Lancelot, he carries both legacy and burden in equal measure. Will holiness shield him from heartbreak?</p>
+      </div>
+    </div>
+
+    <div class="character-card">
+      <img src="ch8.png" alt="Excalibur">
+      <div class="card-info">
+        <h2>Excalibur</h2>
+        <p>Not just a sword—an ancient relic pulsing with power and memory. Every betrayal, every vow—it remembers them all. And perhaps… it chooses its own master.</p>
+      </div>
+    </div>
+
+  </main>
+
+<footer>
+  📜 &copy; 528 A.D. <strong>Mischief and Maidens</strong> — All scrolls reserved. Unauthorized copying may result in a royal summons.
+  <img src="waxseal.png" alt="Wax Seal" style="height: 30px; vertical-align: middle; margin-left: 8px;">
+</footer>
+</body>
+</html>
