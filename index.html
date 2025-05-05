@@ -1,88 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gossip Girl</title>
-    <link rel="stylesheet" href="index.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-	<style>
-	   body{
-		transition: opacity 0.5s ease-in-out;
-		opacity: 1;
-	}
-	.fade-out{
-		opacity: 0;
-	}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gossip Girl</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      transition: opacity 0.5s ease-in-out;
+      opacity: 1;
+    }
+    .fade-out {
+      opacity: 0;
+    }
+  </style>
 </head>
 <body>
-    <header>
-	<div class="hero">
-		<div class="navbar"> 
+
+  <header>
+    <div class="hero">
+      <div class="navbar"> 
+  <h1>Maidens and Mischief</h1>
   
-	 <h1>Maidens and Mischief</h1>
         <nav>
-            <ul>
-                <li><a href="#" id="home" class="active">Home</a></li>
-<script>
-	document.getElementById('home').addEventListener('click',function() {
-	document.body.classList.add('fade-out');
-	setTimeout(function(){
-	  window.location.href = 'index.html';
-}, 400);
-});
-	</script>
-                <li><a href="#">Court</a></li>
-                <li><a href="#">Tales</a></li>
-                <li><a href="#" id="whisper">Whispers</a></li>
-<script>
-	document.getElementById('whisper').addEventListener('click',function() {
-	document.body.classList.add('fade-out');
-	setTimeout(function(){
-	  window.location.href = 'whisper.html';
-}, 400);
-});
-	</script>
-            </ul>
-	
-
-
-</div>	 	
-  </div>
-	</div>
+          <ul>
+            <li><a href="#" id="home" class="active">Home</a></li>
+            <li><a href="#" id="court">Court</a></li>
+            <li><a href="#" id="tales">Tales</a></li>
+            <li><a href="#" id="whisper">Whispers</a></li>
+          </ul>
         </nav>
-     
- 
-    </header>
+      </div>
+    </div>
+  </header>
 
-<body>
-
- <div class="profile-container">
+  <script>
+    document.getElementById('home').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'index.html';
+      }, 400);
+    });
+ document.getElementById('court').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'court.html';
+      }, 400);
+    });
+document.getElementById('tales').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'tales.html';
+      }, 400);
+    });
+    document.getElementById('whisper').addEventListener('click', function () {
+      document.body.classList.add('fade-out');
+      setTimeout(function () {
+        window.location.href = 'whisper.html';
+      }, 400);
+    });
+  </script>
+</header>
+  <div class="profile-container">
     <div class="banner">
       <img src="banner.png" alt="Banner">
     </div>
-
     <div class="profile-pic">
       <img src="logo2.jpg" alt="Profile Pic">
     </div>
-
     <div class="profile-info">
       <h1>Mischief Maiden</h1>
       <p class="handle">@gossipmaidenofcamelot</p>
       <p class="link">gossipmaiden.kingdom.blog</p>
       <p class="bio">
-        Mischief Maiden here, Your one and only source into the scandalous lives of Camelot’s elite. I shall post every tale and whisper from the court and tavern. Think I missed a scandal? Or just wish to speak? Send thy secrets through whispers. Who am I? That's a secret I'll never tell.<br> <br>You know you love the drama,<br> xoxo — The Maidens<br><small>(All scrolls and tales belong to their rightful tellers.)</small>
+        Mischief Maiden here, Your one and only source into the scandalous lives of Camelot’s elite. I shall post every tale and whisper from the court and tavern. Think I missed a scandal? Or just wish to speak? Send thy secrets through whispers. Who am I? That's a secret I'll never tell.        <br><br>You know you love the drama,<br>
+        xoxo — The Maidens<br>
+        <small>(All scrolls and tales belong to their rightful tellers.)</small>
       </p>
-
       <div class="buttons">
         <button class="secret-btn" onclick="location.href='whisper.html'">Got a secret?</button>
         <button id="followBtn" class="follow-btn">Follow</button>
         <button class="dots-btn"><b>⋯</b></button>
       </div>
-
       <div class="tabs">
         <span class="tab active">Posts</span>
         <span class="tab-icon">🔍</span>
@@ -90,108 +92,216 @@
     </div>
   </div>
 
+<div id="imagePopup">
+  <span id="closePopup">&times;</span>
+  <img id="popupImage" src="" alt="Popup">
+</div>
+<!-- Post 1 -->
 <div class="wrapper">
-    <div class="container">
-
-      <!-- Sidebar -->
-      <div class="sidebar">
-        <h2>Welcome</h2>
-        <p>Welcome to Mischief and Maidens, the Scroll of the Kingdom— Made by nobles, for nobles.</p>
-
-        <h2>Tales</h2>
+  <div class="container">
+    <div class="sidebar">
+      <h2>Welcome</h2>
+      <p>Welcome to Mischief and Maidens, the Scroll of the Kingdom — Made by nobles, for the nobles.</p>
+       <h2>Portraits and Tapestries</h2>
+      <p>Gaze upon the attire of fair maidens and gallant knights. <br><a href="#" class="popup-link" data-image="collage.png">VIEW</a></p>
+ <h2>Tales</h2>
         <p>Scandals, secrets, and stories from inside the castle walls. The truth? That depends on who's telling it.</p>
+    </div>
 
-        <h2>Portraits & Tapestries</h2>
-        <p>Gaze upon the attire of fair maidens and gallant knights. <br><a href="#">VIEW PORTRAITS</a></p>
-
-        <h2>Gatherings</h2>
-        <p>Feasts, Duels, and Royal Celebrations — the places to see and be seen (and overheard).</p>
-
-        <h2>Royal Archives</h2>
-        <p>Old scrolls, official records, and sacred sources — for the curious, the clever, and the cautious</p>
+    <div class="main">
+      <h1 class="title">Mischief Maiden<i>!</i></h1>
+      <div class="post-box">
+        <p class="headline">Spotted: "Forbidden Love in the Rose Garden: Queen Guinevere's Secret Knight"</p>
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiziqOiI-MgqqvuirKeUUhgq8m6qpD50EbEuaYYFkduPVsVt0wnNsbu1keYzIDjBziOWg3GXCAJfVuYu7JNkskuOTusbZyUNeouUjGhJwu-sOsBUOs3sD_7ZQgb7BT3PNaWV_roJilXRZ45/s400/_Guinevere%2520and%2520lancelot_E.jpg"  class="post-image">
+        <p class="post-text">
+          Whispers from the inner chambers say Queen Guinevere has been meeting Sir Lancelot beneath the rose-covered royal gardens after midnight.<br> Last night, the queen's scarf was spotted snagged on the knight's belt — by a chambermaid who's now been dismissed without cause. <br><br>
+          <i>Is this courtly love... or a royal scandal?</i>
+          <span class="signature">xoxo, MISCHIEF MAIDEN</span>
+        </p>
       </div>
+    </div>
 
-      <!-- Main Feed -->
-      <div class="main">
-
-        <h1 class="title">Mischief Maiden<i>!</i></h1>
-
-        <!-- Post 1 -->
-        <div class="post-box">
-          <p class="headline">Spotted: "Forbidden Love in the Rose Garden: Queen Guinevere's Secret Knight"</p>
-          <img src="tg.jpg" alt="pic1" class="post-image">
-          <p class="post-text">
-            Whispers from the inner chambers say Queen Guinevere has been meeting Sir Lancelot beneath the rose-covered royal garedens after midnight. <br> Last night, the queen's scarf was spotted snagged on the knight's belt — by a chamberaid who's now been dismissed without cause. <br> <br>
-<i> is this courtly love... or a royal scandal?</i>
-            <span class="signature">xoxo, MISCHIEF MAIDEN</span>
-          </p>
-        </div>
-
-        <!-- Post 2 -->
-        <div class="post-box">
-          <p class="headline">Spotted: "Blood and Magic - The Truth Behind Mordred's Birth"</p>
-          <img src="mord.jpg" alt="pic2" class="post-image">
-          <p class="post-text">
-            So here's the rumor: King Arthur once fell in love with a mysterious lady during a spring festival. The twist? She was actually his half-sister, Morgan Le Fay.<br> Their child? Mordred — the same guy who's now causing major drama in the kingdom. <br> <br>
-<i> Let's just say... family dinners are probably awkward now. </i>
-            <span class="signature">xoxo, MISCHIEF MAIDEN</span>
-          </p>
-        </div>
-
-        <!-- Post 3 -->
-        <div class="post-box">
-          <p class="headline">Spotted: "Excalibur is Missing — Yes, That Sword"</p>
-          <img src="sword.jpg" alt="pic3" class="post-image">
-          <p class="post-text">
-            King Arthur's magical sword, Excalibur, is gone! Some same it disappeared after a battle. Others think that the Lady of the Lake took it back.<br> A few even say Mordred has it...<br> Whoever has it now might have the power to rule Camelot! <br><br>
-<i> No sword, No king? We'll find out. </i>
-            <span class="signature">xoxo, MISCHIEF MAIDEN</span>
-          </p>
-        </div>
-
-
-        <!-- Post 4 -->
-        <div class="post-box">
-          <p class="headline">Spotted: "The Lady of the Lake Has a New Favorite — and It's Not Lancelot"</p>
-          <img src="lotl.jpg" alt="pic4" class="post-image">
-          <p class="post-text">
-            Sir Galahad (yes, Lancelot's son!) just got a glowing cup from the Lady of the Lake herself. People say it's the Holy Grail. Galahad looked like a hero, and Lancelot... not so much. <br> Looks like there's a new star knight at Camelot. <br><br>
-<i>Turns out, being kind and nice really does pay off.</i>
-            <span class="signature">xoxo, MISCHIEF MAIDEN</span>
-          </p>
-        </div>
-
-      </div>
-
-      <!-- Side Buttons -->
-      <div class="nav-buttons">
-        <div class="nav-circle">hall</div>
-        <div class="nav-circle">tales</div>
-        <div class="nav-circle">portraits</div>
-        <div class="nav-circle">scrolls</div>
-      </div>
-
+    <div class="nav-buttons">
+      <div class="nav-circle">hall</div>
+      <div class="nav-circle">tales</div>
+      <div class="nav-circle">portraits</div>
+      <div class="nav-circle">scrolls</div>
     </div>
   </div>
+</div>
+
+<!-- Post 2 -->
+<div class="wrapper">
+  <div class="container">
+    <div class="sidebar">
+       <h2>Gatherings</h2>
+        <p>Feasts, Duels, and Royal Celebrations — the places to see and be seen (and overheard).</p>
+ <h2>Royal Archives</h2>
+        <p>Old scrolls, official records, and sacred sources — for the curious, the clever, and the cautious.</p>
+ <h2>Chambermaid's Confessions</h2>
+        <p>The unseen eyes and unheard voices finally speak - what the servants know may crown or crush a kingdom.</p>
+    </div>
+
+    <div class="main">
+      <h1 class="title">Mischief Maiden<i>!</i></h1>
+      <div class="post-box">
+        <p class="headline">Spotted: "Blood and Magic - The Truth Behind Mordred's Birth"</p>
+        <img src="mordred.png" alt="pic2" class="post-image">
+        <p class="post-text">
+          So here's the rumor: King Arthur once fell in love with a mysterious lady during a spring festival. The twist? She was actually his half-sister, Morgan Le Fay.<br> Their child? Mordred — the same guy who's now causing major drama in the kingdom. <br><br>
+          <i>Let's just say... family dinners are probably awkward now.</i>
+          <span class="signature">xoxo, MISCHIEF MAIDEN</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <div class="nav-circle">hall</div>
+      <div class="nav-circle">tales</div>
+      <div class="nav-circle">portraits</div>
+      <div class="nav-circle">scrolls</div>
+    </div>
+  </div>
+</div>
+
+<!-- Post 3 -->
+<div class="wrapper">
+  <div class="container">
+    <div class="sidebar">
+      <h2>Royal Whispering</h2>
+        <p>Secrets overheard in the halls of Camelot — hushed voices, hurried footsteps, and hearts laid bare.</p>
+ <h2>The Roundtable Rundown</h2>
+        <p>Who's in? Who's out? Shifts in power among Arthur’s most trusted — and most envied — knights.</p>
+ <h2>Masques and Masquerades</h2>
+        <p>Behind every silk mask is a secret — and we’ve unmasked more than a few. Let the dance of deception begin.</p>
+    </div>
+
+    <div class="main">
+      <h1 class="title">Mischief Maiden<i>!</i></h1>
+      <div class="post-box">
+        <p class="headline">Spotted: "Excalibur is Missing — Yes, That Sword"</p>
+        <img src="https://i.etsystatic.com/41298176/r/il/fdd25a/5985832033/il_1588xN.5985832033_cx7f.jpg" alt="pic3" class="post-image" style="height: 350px;>
+        <p class="post-text">
+          King Arthur's magical sword, Excalibur, is gone! Some say it disappeared after a battle. Others think that the Lady of the Lake took it back.<br> A few even say Mordred has it...<br> Whoever has it now might have the power to rule Camelot! <br><br>
+          <i>No sword, No king? We'll find out.</i>
+          <span class="signature">xoxo, MISCHIEF MAIDEN</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <div class="nav-circle">hall</div>
+      <div class="nav-circle">tales</div>
+      <div class="nav-circle">portraits</div>
+      <div class="nav-circle">scrolls</div>
+    </div>
+  </div>
+</div>
+
+<!-- Post 4 -->
+<div class="wrapper">
+  <div class="container">
+    <div class="sidebar">
+      <h2>Scrolls Sealed In Wax</h2>
+      <p>Intercepted letters, misplaced parchments, and things never meant to be read aloud — until now.</p>
+	<h2>Lady-In-Waiting Reports</h2>
+	<p>Observations from the quiet corners — who's weeping, who's whispering, and who’s worth watching closely.</p>
+	<h2>Feast Table Talk</h2>
+	<p>What’s being served, who’s being snubbed, and which goblet was poisoned — the meal is only half the drama.</p>
+    </div>
+
+    <div class="main">
+      <h1 class="title">Mischief Maiden<i>!</i></h1>
+      <div class="post-box">
+        <p class="headline">Spotted: "The Lady of the Lake Has a New Favorite — and It's Not Lancelot"</p>
+        <img src="https://www.meisterdrucke.us/kunstwerke/1260px/Howard%20Pyle%20-%20The%20Lady%20of%20the%20Lake%20and%20Sir%20Galahad%20illustration%20from%20The%20Story%20of%20the%20Grail%20and%20the%20Passing%20of%20Arthur%20c1910%20%20-%20%28MeisterDrucke-181293%29.jpg 
+" alt="pic4" class="post-image" style="height: 400px;>
+        <p class="post-text">
+          Sir Galahad (yes, Lancelot's son!) just got a glowing cup from the Lady of the Lake herself. People say it's the Holy Grail. Galahad looked like a hero, and Lancelot... not so much. <br><br>
+          <i>Turns out, being kind and nice really does pay off.</i>
+          <span class="signature">xoxo, MISCHIEF MAIDEN</span>
+        </p>
+      </div>
+    </div>
+
+    <div class="nav-buttons">
+      <div class="nav-circle">hall</div>
+      <div class="nav-circle">tales</div>
+      <div class="nav-circle">portraits</div>
+      <div class="nav-circle">scrolls</div>
+    </div>
+  </div>
+</div>
 
 
-<script>
-  const followBtn = document.getElementById('followBtn');
 
-  followBtn.addEventListener('click', function () {
-    if (followBtn.textContent === 'Follow') {
-      followBtn.textContent = 'Following';
-      followBtn.classList.add('followed'); // optional: for styling
-    } else {
-      followBtn.textContent = 'Follow';
-      followBtn.classList.remove('followed');
-    }
+   <script>
+    const followBtn = document.getElementById('followBtn');
+    followBtn.addEventListener('click', function () {
+      if (followBtn.textContent === 'Follow') {
+        followBtn.textContent = 'Following';
+        followBtn.classList.add('followed');
+      } else {
+        followBtn.textContent = 'Follow';
+        followBtn.classList.remove('followed');
+      }
+    });
+
+ 
+  window.addEventListener('DOMContentLoaded', () => {
+    const popup = document.getElementById('imagePopup');
+    const popupImg = document.getElementById('popupImage');
+    const closeBtn = document.getElementById('closePopup');
+
+    let scale = 1;
+
+    document.querySelectorAll('.popup-link').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const imgSrc = link.getAttribute('data-image');
+        popupImg.src = imgSrc;
+        scale = 1;
+        popupImg.style.transform = 'scale(1)';
+        popup.style.display = 'flex';
+      });
+    });
+
+    closeBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+      popupImg.src = '';
+    });
+
+    popup.addEventListener('click', e => {
+      if (e.target === popup) {
+        popup.style.display = 'none';
+        popupImg.src = '';
+      }
+    });
+
+    popupImg.addEventListener('wheel', e => {
+      e.preventDefault();
+      if (e.deltaY < 0) {
+        scale *= 1.1;
+      } else {
+        scale /= 1.1;
+      }
+      scale = Math.min(Math.max(scale, 1), 5); // zoom between 1x and 5x
+      popupImg.style.transform = `scale(${scale})`;
+    });
   });
-</script>
+
+
+
+  </script>
+
+
+  <footer>
+  📜 &copy; 528 A.D. <strong>Mischief and Maidens</strong> — All scrolls reserved. Unauthorized copying may result in a royal summon.
+  <img src="waxseal.png" alt="Wax Seal" style="height: 30px; vertical-align: middle; margin-left: 8px;">
+</footer>
+
+
+
 
 </body>
-
- <footer>
-    <p>&copy; 2025 Maidens and Mischief. All rights reserved.</p>
-  </footer>
 </html>
