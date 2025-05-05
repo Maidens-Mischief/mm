@@ -6,36 +6,60 @@ body {
 }
 
 header {
-  background-color: #8b5c3c;
-  color: #fff8f0;
-  padding: 40px;
+  background-color: #846c55;
+  color: #fff;
   text-align: center;
+  padding: 12px;
+  font-size: 17px;
+  width: 100%;
+  margin-top: -80px;
+  font-family: 'Uncial Antiqua', cursive;
 }
 
-header h1 {
-    font-family: 'Sour Gummy', sans-serif;
-  font-size: 50px;
-  margin: 0;
-  letter-spacing: 2px;
+/* Hero Section */
+.hero {
+  width: 80%;
+  margin: auto;
 }
 
+.navbar h1 {
+	margin-top: 80px;
+	font-family: 'Uncial Antiqua', cursive;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+/* Navbar */
+.navbar {
+  margin: 30px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+  padding: 10px;
+  font-family: 'MedievalSharp', cursive
+}
+
+.navbar p{ 
+	margin-top: -20px;
+}
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: center;
   padding: 0;
-  margin-top: 0.5rem;
+  
 }
 
-nav li {
-  margin: 0 1.5rem;
+nav ul li {
+	display: inline;
+	margin: 0 30px;
 }
 
-nav a {
+
+nav ul li a {
+  color: #fff;
   text-decoration: none;
-  color: #fff8f0;
-  font-weight: bold;
-  transition: color 0.3s;
 }
 
 nav a.active,
@@ -106,17 +130,15 @@ button:hover {
 
 footer {
   text-align: center;
-  padding: 15px;
+  padding: 20px;
   background-color: #eaddcf;
   color: #3b2f2f;
-  font-size: 0.9rem;
-  position: absolute;
+  font-size: 17px;
   bottom: -180px;
-left: 0;
+  left: 0;
   right: 0;
-  padding: 20px;
-  height: 30px;
-  
+  height: 35px;
+  margin-bottom: 20px;
 }
 
 button.sent {
